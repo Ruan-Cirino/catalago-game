@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogo Gamer</title>
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+  <header class="topo">
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+    <a class="logo" href="index.html">Catalogo Gamer</a>
+    <form class="topo-busca" action="catalogo.html">
+      <input type="search" name="q" placeholder="Digite o que voce procura">
+      <button type="submit" aria-label="Pesquisar">⌕</button>
+    </form>
+    <nav id="menu" class="nav-acoes">
+      <a class="nav-icone" href="catalogo.html">
+        <i class="fa-solid fa-gamepad"></i>
+        <strong>Catalogo</strong>
+      </a>
+
+      <a class="nav-icone" href="favoritos.html">
+        <i class="fa-solid fa-heart"></i>
+        <strong>Favoritos</strong>
+      </a>
+      <div class="conta-menu">
+        <button class="conta-btn" type="button">
+          <span class="perfil-link"><span id="perfilAvatar">P</span></span>
+          <span class="conta-texto"><small>Bem-vindo(a)</small><strong id="contaNome">Minha Conta</strong></span>
+          <span class="seta">⌄</span>
+        </button>
+        <div class="conta-dropdown">
+          <div class="conta-resumo">
+            <span class="perfil-link grande"><span id="dropdownAvatar">P</span></span>
+            <p>Ola, <strong id="dropdownNome">visitante</strong></p>
+          </div>
+          <a href="perfil.html"><i class="fa-solid fa-user"></i> Minha Conta</a>
+
+          <a href="favoritos.html"><i class="fa-solid fa-heart"></i> Meus Favoritos</a>
+
+          <a href="sobre.html"><i class="fa-solid fa-circle-info"></i> Sobre</a>
+
+          <a href="login.html" id="sair"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="tag">FreeToGame API</p>
+        <h1>Seu catalogo gamer de jogos gratuitos</h1>
+        <p>Explore jogos free-to-play para PC e navegador, pesquise por nome, filtre por genero e salve seus favoritos.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="catalogo.html">Ver Catalogo</a>
+          <a class="btn secondary" href="favoritos.html">Meus Favoritos</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <span class="status">Online</span>
+        <h2 id="saudacao">Bem-vindo</h2>
+        <p>Jogos, detalhes, filtros e favoritos em uma interface simples para apresentacao academica.</p>
+      </div>
+    </section>
+
+    <section class="recursos">
+      <article>
+        <h3>Busca rapida</h3>
+        <p>Encontre jogos por nome com atualizacao instantanea.</p>
+      </article>
+      <article>
+        <h3>Filtros</h3>
+        <p>Organize o catalogo por genero usando dados reais da API.</p>
+      </article>
+      <article>
+        <h3>Favoritos</h3>
+        <p>Salve jogos no navegador sem banco de dados.</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="js/home.js"></script>
+</body>
+
+</html>

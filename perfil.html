@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil | Catalogo Gamer</title>
+  <link rel="stylesheet" href="css/perfil.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+  <header class="topo">
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+    <a class="logo" href="index.html">Catalogo Gamer</a>
+    <form class="topo-busca" action="catalogo.html">
+      <input type="search" name="q" placeholder="Digite o que voce procura">
+      <button type="submit" aria-label="Pesquisar">⌕</button>
+    </form>
+    <nav id="menu" class="nav-acoes">
+      <a class="nav-icone" href="catalogo.html">
+        <i class="fa-solid fa-gamepad"></i>
+        <strong>Catalogo</strong>
+      </a>
+
+      <a class="nav-icone" href="favoritos.html">
+        <i class="fa-solid fa-heart"></i>
+        <strong>Favoritos</strong>
+      </a>
+      <div class="conta-menu">
+        <button class="conta-btn" type="buttoFn">
+          <span class="perfil-link"><span id="perfilAvatar">P</span></span>
+          <span class="conta-texto"><small>Bem-vindo(a)</small><strong id="contaNome">Minha Conta</strong></span>
+          <span class="seta">⌄</span>
+        </button>
+        <div class="conta-dropdown">
+          <div class="conta-resumo">
+            <span class="perfil-link grande"><span id="dropdownAvatar">P</span></span>
+            <p>Ola, <strong id="dropdownNome">visitante</strong></p>
+          </div>
+          <a href="perfil.html"><i class="fa-solid fa-user"></i> Minha Conta</a>
+
+          <a href="favoritos.html"><i class="fa-solid fa-heart"></i> Meus Favoritos</a>
+
+          <a href="sobre.html"><i class="fa-solid fa-circle-info"></i> Sobre</a>
+
+          <a href="login.html" id="sair"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="cabecalho">
+      <p class="tag">Conta gamer</p>
+      <h1>Meu Perfil</h1>
+      <p>Edite seus dados pessoais e personalize sua foto de perfil.</p>
+    </section>
+
+    <section class="perfil-layout">
+      <aside class="preview">
+        <div class="foto-preview" id="fotoPreview">P</div>
+        <h2 id="nomePreview">Jogador</h2>
+        <p id="emailPreview">email@exemplo.com</p>
+        <button id="removerFoto" type="button">Remover foto</button>
+      </aside>
+
+      <form id="perfilForm" class="formulario">
+        <div class="campo">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" required>
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="duas-colunas">
+          <div class="campo">
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" placeholder="(00) 00000-0000">
+          </div>
+
+          <div class="campo">
+            <label for="idade">Idade</label>
+            <input type="number" id="idade" min="1" max="120">
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="plataforma">Plataforma favorita</label>
+          <select id="plataforma">
+            <option value="">Selecione</option>
+            <option value="PC">PC</option>
+            <option value="Browser">Browser</option>
+            <option value="Console">Console</option>
+            <option value="Mobile">Mobile</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="foto">Foto de perfil</label>
+          <input type="file" id="foto" accept="image/*">
+        </div>
+
+        <div class="campo">
+          <label for="bio">Sobre mim</label>
+          <textarea id="bio" rows="5" placeholder="Fale um pouco sobre seu estilo de jogo"></textarea>
+        </div>
+
+        <button class="salvar" type="submit">Salvar perfil</button>
+        <p id="mensagem" class="mensagem"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/perfil.js"></script>
+</body>
+
+</html>

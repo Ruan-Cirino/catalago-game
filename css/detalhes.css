@@ -1,0 +1,417 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f8f7ff;
+  background: #09090d;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 6%;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.25);
+  background: rgba(8, 8, 11, 0.96);
+}
+
+.logo {
+  color: #c084fc;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+nav a {
+  color: #d8d3e8;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: #a855f7;
+}
+
+.perfil-link {
+  display: inline-grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  overflow: hidden;
+  border: 2px solid #8b5cf6;
+  border-radius: 50%;
+  background: #27272f;
+}
+
+.perfil-link span {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.menu-btn {
+  display: none;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.container {
+  width: min(1120px, 88%);
+  margin: 0 auto;
+  padding: 36px 0;
+}
+
+.voltar {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #c084fc;
+  font-weight: 800;
+}
+
+.mensagem {
+  color: #ddd6fe;
+}
+
+.detalhes {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(300px, 1.05fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.capa {
+  overflow: hidden;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  background: #15151b;
+}
+
+.capa img {
+  width: 100%;
+  display: block;
+}
+
+.conteudo {
+  padding: 26px;
+  border: 1px solid rgba(168, 85, 247, 0.32);
+  border-radius: 8px;
+  background: #15151b;
+}
+
+.tag {
+  margin-bottom: 8px;
+  color: #c084fc;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-bottom: 14px;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.descricao {
+  margin: 18px 0;
+  color: #d8d3e8;
+  line-height: 1.7;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.info div {
+  padding: 14px;
+  border-radius: 8px;
+  background: #202029;
+}
+
+.info strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #e9d5ff;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+button,
+.site {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button {
+  background: #8b5cf6;
+  color: #fff;
+}
+
+.site {
+  background: #27272f;
+  color: #fff;
+}
+
+@media (max-width: 780px) {
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 64px;
+    right: 6%;
+    display: none;
+    flex-direction: column;
+    width: 210px;
+    padding: 18px;
+    border: 1px solid #3f3f46;
+    border-radius: 8px;
+    background: #15151b;
+  }
+
+  nav.aberto {
+    display: flex;
+  }
+
+  .detalhes,
+  .info {
+    grid-template-columns: 1fr;
+  }
+}
+
+.topo {
+  gap: 18px;
+  padding: 16px 3%;
+}
+
+.menu-btn {
+  display: block;
+  color: #ff005c;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.logo {
+  white-space: nowrap;
+}
+
+.topo-busca {
+  display: flex;
+  flex: 1;
+  min-width: 220px;
+  max-width: 620px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #202025;
+}
+
+.topo-busca input {
+  flex: 1;
+  min-width: 0;
+  padding: 15px 22px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.topo-busca button {
+  width: 58px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav-acoes {
+  gap: 20px;
+}
+
+.nav-icone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.nav-icone span {
+  color: #ff005c;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.conta-menu {
+  position: relative;
+}
+
+.conta-btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.conta-texto {
+  display: grid;
+  text-align: left;
+}
+
+.conta-texto small {
+  color: #d4d4d8;
+  font-size: 0.9rem;
+}
+
+.conta-texto strong {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.seta {
+  color: #fff;
+}
+
+.conta-dropdown {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  z-index: 30;
+  display: none;
+  width: 270px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  color: #18181b;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.35);
+}
+
+.conta-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 36px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+.conta-menu:hover .conta-dropdown,
+.conta-menu:focus-within .conta-dropdown {
+  display: block;
+}
+
+.conta-resumo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.conta-dropdown a {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 22px;
+  color: #18181b;
+  font-weight: 800;
+}
+
+.conta-dropdown a:hover {
+  background: #f4f4f5;
+  color: #7e22ce;
+}
+
+.conta-dropdown a span {
+  width: 24px;
+  color: #111;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.perfil-link.grande {
+  width: 52px;
+  height: 52px;
+  border-color: #e5e7eb;
+}
+
+@media (max-width: 980px) {
+  .topo {
+    flex-wrap: wrap;
+  }
+
+  .topo-busca {
+    order: 3;
+    max-width: none;
+    flex-basis: 100%;
+  }
+
+  .nav-acoes {
+    position: absolute;
+    top: 70px;
+    right: 3%;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 280px;
+    padding: 18px;
+    border: 1px solid #3f3f46;
+    border-radius: 8px;
+    background: #15151b;
+  }
+
+  .nav-acoes.aberto {
+    display: flex;
+  }
+
+  .conta-dropdown {
+    position: static;
+    width: 100%;
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favoritos | Catalogo Gamer</title>
+  <link rel="stylesheet" href="css/favoritos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+  <header class="topo">
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+    <a class="logo" href="index.html">Catalogo Gamer</a>
+    <form class="topo-busca" action="catalogo.html">
+      <input type="search" name="q" placeholder="Digite o que voce procura">
+      <button type="submit" aria-label="Pesquisar">⌕</button>
+    </form>
+    <nav id="menu" class="nav-acoes">
+      <a class="nav-icone" href="catalogo.html">
+        <i class="fa-solid fa-gamepad"></i>
+        <strong>Catalogo</strong>
+      </a>
+
+      <a class="nav-icone" href="favoritos.html">
+        <i class="fa-solid fa-heart"></i>
+        <strong>Favoritos</strong>
+      </a>
+      <div class="conta-menu">
+        <button class="conta-btn" type="button">
+          <span class="perfil-link"><span id="perfilAvatar">P</span></span>
+          <span class="conta-texto"><small>Bem-vindo(a)</small><strong id="contaNome">Minha Conta</strong></span>
+          <span class="seta">⌄</span>
+        </button>
+        <div class="conta-dropdown">
+          <div class="conta-resumo">
+            <span class="perfil-link grande"><span id="dropdownAvatar">P</span></span>
+            <p>Ola, <strong id="dropdownNome">visitante</strong></p>
+          </div>
+          <a href="perfil.html"><i class="fa-solid fa-user"></i> Minha Conta</a>
+
+          <a href="favoritos.html"><i class="fa-solid fa-heart"></i> Meus Favoritos</a>
+
+          <a href="sobre.html"><i class="fa-solid fa-circle-info"></i> Sobre</a>
+
+          <a href="login.html" id="sair"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="cabecalho">
+      <div>
+        <p class="tag">Sua lista</p>
+        <h1>Jogos Favoritos</h1>
+        <p>Jogos salvos localmente no navegador.</p>
+      </div>
+      <button id="limparFavoritos" class="limpar">Limpar favoritos</button>
+    </section>
+
+    <section id="mensagem" class="mensagem"></section>
+    <section id="listaFavoritos" class="grid"></section>
+  </main>
+
+  <script src="js/favoritos.js"></script>
+</body>
+
+</html>
