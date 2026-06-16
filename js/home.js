@@ -52,7 +52,8 @@ function configurarSair() {
   const sair = document.getElementById("sair");
 
   sair.addEventListener("click", function () {
-    localStorage.removeItem("catalogoGamerUsuario");
+    localStorage.clear();
+    window.location.href = "login.html";
   });
 }
 

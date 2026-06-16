@@ -20,4 +20,9 @@ form.addEventListener("submit", function (evento) {
 
   localStorage.setItem("catalogoGamerUsuario", JSON.stringify(usuario));
   window.location.href = "index.html";
+  
+  function logout() {
+    localStorage.clear();
+    window.location.href = "login.html";
+  }
 });

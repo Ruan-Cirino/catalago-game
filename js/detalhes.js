@@ -13,6 +13,9 @@ function configurarMenu() {
 function configurarSair() {
   document.getElementById("sair").addEventListener("click", function () {
     localStorage.removeItem("catalogoGamerUsuario");
+    localStorage.removeItem("catalogoGamerPerfil");
+    localStorage.removeItem("catalogoGamerFavoritos");
+    window.location.href = "login.html";
   });
 }
 
